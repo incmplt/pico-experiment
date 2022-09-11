@@ -1,3 +1,5 @@
+# MicroPython for Rapperry Pi Pico
+# -*- coding: utf-8 -*-
 import machine
 import utime
 
