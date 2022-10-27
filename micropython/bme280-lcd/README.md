@@ -6,6 +6,7 @@
 
 * RaspberryPi Pico
 * ST7032 : [AE-AQM0802+PCA9515](https://akizukidenshi.com/catalog/g/gK-11354/)
+  RaspberryPi 用 キャラクターディスプレイ LCD キット (内部にST7023でLCD制御)
 * BME280 : [AE-BME280](https://akizukidenshi.com/catalog/g/gK-09421/)
 
 ## Reference
