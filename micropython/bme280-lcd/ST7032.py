@@ -48,13 +48,13 @@ class ST7032():
     self.writeCmd(0x39)
     self.writeCmd(0x70 + contrast)
 
-    def setCursor(self, x, y):
-        if x < 0: x = 0
-        if y < 0: y = 0
-        addr = y * 0x40 + x
-        self.writeCmd(0x80 + addr)
+  def setCursor(self, x, y):
+    if x < 0: x = 0
+    if y < 0: y = 0
+    addr = y * 0x40 + x
+    self.writeCmd(0x80 + addr)
 
-    def print(self, str):
-        for c in str:
-            self.writeData(ord(c))
+  def print(self, str):
+    for c in str:
+      self.writeData(ord(c))
 
