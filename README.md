@@ -19,6 +19,11 @@ pico-experiment
   |   +- bme280-lcd        : BME280 で WBGT簡易測定 8x2 LCD に情報表示
   |   |   +- main.py       : メインの処理
   |   |   +- ST7032.py     : 8x2 LCD 制御ライブラリ
+  |
+  +- circuitpython
+  |   +- 3d-mouse
+  |   |   +- main.py       : KXM52-1050 を使用した3Dマウス 実装例
+  |   |
 ```
 
 ## Install
