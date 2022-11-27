@@ -10,19 +10,22 @@ RaspberryPi Pico experiment source code.
 
 ```text
 pico-experiment
-  +- micropython-basic     : Pico だけで動作する MicroPython のサンプルコード
-  |   +- led.py            : Pico 本体の LED を点滅させる(Lチカ)コード
-  |   +- get-sensor.py     : Pico 本体の 温度センサーを読み取りコンソール表示
-  |   +- i2c-scan.py       : I2C 0,1 をスキャンし接続しているデバイス情報を表示
+  +- micropython-basic      : Pico だけで動作する MicroPython のサンプルコード
+  |   +- led.py             : Pico 本体の LED を点滅させる(Lチカ)コード
+  |   +- get-sensor.py      : Pico 本体の 温度センサーを読み取りコンソール表示
+  |   +- i2c-scan.py        : I2C 0,1 をスキャンし接続しているデバイス情報を表示
   |
   +- micropython
-  |   +- bme280-lcd        : BME280 で WBGT簡易測定 8x2 LCD に情報表示
-  |   |   +- main.py       : メインの処理
-  |   |   +- ST7032.py     : 8x2 LCD 制御ライブラリ
+  |   +- bme280-lcd         : BME280 で WBGT簡易測定 8x2 LCD に情報表示
+  |   |   +- main.py        : メインの処理
+  |   |   +- ST7032.py      : 8x2 LCD 制御ライブラリ
+  |   |
+  |   +- ae-kit45-keypad4x3 : BME280 で WBGT簡易測定 8x2 LCD に情報表示
+  |   |   +- keypad4x3.py   : KEYPAD 4x3 の動作確認プログラム
   |
   +- circuitpython
   |   +- 3d-mouse
-  |   |   +- main.py       : KXM52-1050 を使用した3Dマウス 実装例
+  |   |   +- main.py        : KXM52-1050 を使用した3Dマウス 実装例
   |   |
 ```
 
