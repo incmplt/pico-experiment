@@ -20,7 +20,7 @@ pico-experiment
   |   |   +- main.py        : メインの処理
   |   |   +- ST7032.py      : 8x2 LCD 制御ライブラリ
   |   |
-  |   +- ae-kit45-keypad4x3 : BME280 で WBGT簡易測定 8x2 LCD に情報表示
+  |   +- ae-kit45-keypad4x3 : KEYPAD 4x3 キットを使用した基本的な動作確認
   |   |   +- keypad4x3.py   : KEYPAD 4x3 の動作確認プログラム
   |
   +- circuitpython
