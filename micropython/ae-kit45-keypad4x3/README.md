@@ -1,5 +1,7 @@
 # Raspberry Pi Pico : AE-KIT45-KEYPAD4X3
 
+![RaspberryPi Pico KEYPAD](keypad-4x3-pico-hard.png)
+
 ## Requirement
 
 * RaspberryPi Pico
