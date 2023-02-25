@@ -27,6 +27,9 @@ pico-experiment
   |   +- 3d-mouse
   |   |   +- main.py        : KXM52-1050 を使用した3Dマウス 実装例
   |   |
+  |   +- shortcut
+  |   |   +- main.py        : adafurit HID キーボードエミュレーション
+  |   |
 ```
 
 ## Install
