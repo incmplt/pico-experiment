@@ -21,9 +21,26 @@
 | GP3 | タクトスイッチ / Win + PrintScreen |
 | GP4 | タクトスイッチ / ESCAPE |
 
+以下のライブラリを使用する。
+
+* [adafruit_hid.keyboard.Keyboard](https://docs.circuitpython.org/projects/hid/en/latest/api.html)
+* [adafruit_hid.keycode.Keycode](https://circuitpython.readthedocs.io/projects/hid/en/latest/api.html#adafruit-hid-keycode-keycode)
+
+今回のサンプルでは使用しないが、マウスのエミュレーションなどのライブラリも存在する。
+
+* [adafruit_hid.mouse.Mouse](https://circuitpython.readthedocs.io/projects/hid/en/latest/api.html#adafruit-hid-mouse-mouse)
+* [adafruit_hid.consumer_control.ConsumerControl](https://circuitpython.readthedocs.io/projects/hid/en/latest/api.html#adafruit-hid-consumer-control-consumercontrol)
+* [adafruit_hid.gamepad.Gamepad](https://circuitpython.readthedocs.io/projects/hid/en/3.1.3/api.html#adafruit-hid-gamepad-gamepad)
+
 # Install
 
-CircuitPython をインストールした RaspberryPi Pico に、adafruit_hid モジュールと main.py をコピーして実行。
+Circuit Python を RaspberryPi Picoにインストールする。
+
+adafruit_hid のライブラリを、GitHub からダウンロードして lib 以下をRaspberryPi Pico にコピーする。
+
+[adafruit_hid : GitHub](https://github.com/adafruit/Adafruit_CircuitPython_HID)
+
+main.py をコピーして実行。
 
 ## Reference
 
