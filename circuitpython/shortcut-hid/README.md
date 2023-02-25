@@ -40,7 +40,7 @@ adafruit_hid のライブラリを、GitHub からダウンロードして lib �
 
 [adafruit_hid : GitHub](https://github.com/adafruit/Adafruit_CircuitPython_HID)
 
-main.py をコピーして実行。
+code.py をコピーして実行。
 
 ## Reference
 
