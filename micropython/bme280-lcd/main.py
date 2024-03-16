@@ -33,7 +33,6 @@ if __name__ == '__main__':
         #lcd.print('Temp:')
         #lcd.setCursor(0, 1)
         #lcd.print(tempStr)
- 
         #print( bme.values )
         t,p,h= bme.read_compensated_data()
         t1 = int(t/100 + 0.5)
@@ -48,8 +47,10 @@ if __name__ == '__main__':
         lcd.print(t1Str)
         lcd.setCursor(0, 1)
         lcd.print(h1Str)
-        print( tempStr )
-        utime.sleep(5)
+        #print( tempStr )
+        print(t1Str)
+        print(h1Str)
+        utime.sleep(3)
         
         # WBGT
         if sensor_pos == 1:
@@ -63,7 +64,7 @@ if __name__ == '__main__':
         lcd.setCursor(0, 1)
         wbgtStr = "W:{:5.1f}C".format( wbgt )
         lcd.print( wbgtStr )
-        utime.sleep(5)
+        print(wbgtStr)
+        print("----------")
+        utime.sleep(3)
 
-        
-        
