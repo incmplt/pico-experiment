@@ -160,3 +160,6 @@ $RECYCLE.BIN/
 *.msp
 # Windows shortcuts
 *.lnk
+# Exclude Source data file
+*.fzz
+*.pad
