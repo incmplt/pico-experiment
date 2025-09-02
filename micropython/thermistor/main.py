@@ -3,25 +3,27 @@ import machine
 import time
 import math
 
-sensor=machine.ADC(0)
-sensor_temp = machine.ADC(4)
+sensor=machine.ADC(0) # 103JT-025/050
+sensor_temp = machine.ADC(4) # RaspberryPi pico onboard Thermistor
 conversion_factor = 3.3 / (65535)
 
 B = 3950.0
 R0 = 10000.0
 T0 = 25.0
+Z = 273.15
 
-def readThermistorTemp( adc_val ):
+def calcThermistorTemp( adc_val ):
     # ADC値から電圧を計算
-    volt = adc_val * conversion_factor   
+    volt = adc_val * conversion_factor    
     # 電圧からサーミスタ抵抗を計算(r)
     r = (( 3.3 / volt ) - 1.0 ) * R0
-    # 抵抗値から係数を計算    
-    B0 = 3452.9 * math.pow( r, -0.012329 )
+    # 抵抗値から係数を計算
+    #B0 = 3452.9 * math.pow( r, -0.012329 )
+    B0 = B * math.pow( r, -0.012329 )
     # サーミスタ抵抗から温度を計算
-    T_bar = (1.0 / B) * math.log( r / R0 ) + (1 / ( T0 + 273.15 ))    
+    T_bar = (1.0 / B0 ) * math.log( r / R0 ) + (1 / ( T0 + Z ))    
     # 計算結果はケルビン温度の逆数になっているので摂氏に戻す
-    T = (1.0 / T_bar) - 273.15
+    T = (1.0 / T_bar) - Z
     return T
 
 while True :
@@ -33,7 +35,7 @@ while True :
     temperature = 27 - (reading - 0.706)/0.001721
 
     sens = sensor.read_u16()
-    templ = readThermistorTemp( sens )
+    templ = calcThermistorTemp( sens )
 
     print( "----+----+----+" )
     print( temperature )
