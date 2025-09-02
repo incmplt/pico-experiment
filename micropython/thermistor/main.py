@@ -7,6 +7,7 @@ sensor=machine.ADC(0) # 103JT-025/050
 sensor_temp = machine.ADC(4) # RaspberryPi pico onboard Thermistor
 conversion_factor = 3.3 / (65535)
 
+# B = 3435.0 # Data sheet of 103JT-025/050
 B = 3950.0
 R0 = 10000.0
 T0 = 25.0
@@ -18,7 +19,6 @@ def calcThermistorTemp( adc_val ):
     # 電圧からサーミスタ抵抗を計算(r)
     r = (( 3.3 / volt ) - 1.0 ) * R0
     # 抵抗値から係数を計算
-    #B0 = 3452.9 * math.pow( r, -0.012329 )
     B0 = B * math.pow( r, -0.012329 )
     # サーミスタ抵抗から温度を計算
     T_bar = (1.0 / B0 ) * math.log( r / R0 ) + (1 / ( T0 + Z ))    
@@ -29,11 +29,12 @@ def calcThermistorTemp( adc_val ):
 while True :
     pico_led.on()
     time.sleep(1)
+    # RaspberryPi pico onboard Thermistor
     reading = sensor_temp.read_u16() * conversion_factor
     # The temperature sensor measures the Vbe voltage of a biased bipolar diode, connected to the fifth ADC channel
     # Typically, Vbe = 0.706V at 27 degrees C, with a slope of -1.721mV (0.001721) per degree.
     temperature = 27 - (reading - 0.706)/0.001721
-
+    # External Thermistor (103JT-025/050)
     sens = sensor.read_u16()
     templ = calcThermistorTemp( sens )
 
