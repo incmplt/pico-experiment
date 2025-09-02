@@ -22,6 +22,9 @@ pico-experiment
   |   |
   |   +- ae-kit45-keypad4x3 : KEYPAD 4x3 キットを使用した基本的な動作確認
   |   |   +- keypad4x3.py   : KEYPAD 4x3 の動作確認プログラム
+  |   |
+  |   +- thermistor         : 103JT-025/050 サーミスターを使用した温度測定コード
+  |   |   +- main.py        : 103JT-025/050 サーミスター温度測定コード
   |
   +- circuitpython
   |   +- 3d-mouse
